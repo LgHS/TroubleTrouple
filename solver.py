@@ -1,9 +1,5 @@
-import os.path
-from pathlib import Path
 from itertools import groupby
-
-script_path = Path(__file__).parent.absolute()
-dict_path = os.path.join(script_path, "dic.txt")
+import setup
 arraySize = 4
 
 def countLetters(flatArray):
@@ -72,8 +68,8 @@ def solve(letterArray):
     flatArray = flatten(letterArray)
     letterCount = countLetters(flatArray)
     print("count:" + str(letterCount))
-
-    with open(dict_path, 'r') as file:
+    results = []
+    with open(setup.dict_path, 'r') as file:
         candidates = list(
             filter(lambda w: haveTheRightLetters(letterCount, w), map(lambda l: l.replace("\n", ""), file)))
         print("candidates : " + str(len(candidates)))
@@ -83,3 +79,5 @@ def solve(letterArray):
             result = findPath(flatArray, w, [])
             if(result != None):
                 print("%s, %s" % (w, result))
+                results.append(result)
+    return results
