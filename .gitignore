@@ -1,5 +1,7 @@
 # Ignorer le dossier venv
 venv/
+__pycache__
+.idea
 
 # Ignorer tous les fichiers et dossiers cachés (dot-files), sauf .git et .gitignore
 .*
