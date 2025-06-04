@@ -1,0 +1,18 @@
+# Ignorer le dossier venv
+venv/
+
+# Ignorer tous les fichiers et dossiers cachés (dot-files), sauf .git et .gitignore
+.*
+!.gitignore
+!.git/
+
+# Fichiers spécifiques à macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+._*
+
+# Fichiers de ressources macOS (sur clés USB, etc.)
+.Spotlight-V100/
+.Trashes/
