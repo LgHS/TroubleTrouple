@@ -1,23 +1,17 @@
-import string
-import random
-import time
-
+import ocrdev.step1Capture
+import ocrdev.step2OCR
 import solver
+import time
 import mouse
 
-def generateLetterArray():
-    return [[random.choice(string.ascii_uppercase) for i in range(4)] for j in range(4)]
+ocrdev.step1Capture.capture()
+letters=ocrdev.step2OCR.analyseImage()
 
+print("problem:")
+solver.printArray(letters)
 
+solutions = solver.solve(letters)
 
-
-testProblem = generateLetterArray()
-print("test problem:")
-solver.printArray(testProblem)
-
-print(",".join(map(lambda c: "'" + c + "'", solver.flatten(testProblem))))
-
-solutions = solver.solve(testProblem)
 for s in solutions:
     print("play solution %s" % (s))
     down=False

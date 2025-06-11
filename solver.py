@@ -2,6 +2,11 @@ from itertools import groupby
 import setup
 arraySize = 4
 
+
+
+def printArray(array):
+    print("\n".join(list(map(lambda r: " ".join(r), array))))
+
 def countLetters(flatArray):
     ret = {}
     for key, group in groupby(flatArray, lambda x: x):
