@@ -25,10 +25,12 @@ for i in range(1,15):
 
 
 def moveTo(i):
-    pyautogui.moveTo(positions[i]["x"], positions[i]["y"])
+    pyautogui.moveTo(positions[i]["x"], positions[i]["y"], 1)
 
 def mouseDown():
+    print("mouse down")
     pyautogui.mouseDown()
 
 def mouseUp():
+    print("mouse up")
     pyautogui.mouseUp()
