@@ -28,7 +28,8 @@ def moveTo(i):
     pyautogui.moveTo(positions[i]["x"], positions[i]["y"], 0.2)
 
 def dragTo(i):
-    pyautogui.dragTo(positions[i]["x"], positions[i]["y"], duration=0.2, button="left")
+    p=pyautogui.position()
+    pyautogui.drag(positions[i]["x"]-p.x, positions[i]["y"]-p.y, duration=0.2, button="left")
 
 def mouseDown():
     print("mouse down")
