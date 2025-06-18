@@ -25,7 +25,10 @@ for i in range(1,15):
 
 
 def moveTo(i):
-    pyautogui.moveTo(positions[i]["x"], positions[i]["y"], 1)
+    pyautogui.moveTo(positions[i]["x"], positions[i]["y"], 0.2)
+
+def dragTo(i):
+    pyautogui.dragTo(positions[i]["x"], positions[i]["y"], duration=0.2, button="left")
 
 def mouseDown():
     print("mouse down")

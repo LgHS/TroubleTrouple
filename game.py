@@ -8,10 +8,11 @@ def runSolution(s):
     down = False
     for c in s:
         print("goTo %s" % (c))
-        mouse.moveTo(c)
         if (not down):
+            mouse.moveTo(c)
             mouse.mouseDown()
             down = True
-        time.sleep(0.2)
+        else :
+            mouse.dragTo(c)
     mouse.mouseUp()
     time.sleep(0.1)
