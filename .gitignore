@@ -1,4 +1,4 @@
-mouseSetup.json
+setup.json
 # Ignorer le dossier venv
 venv/
 __pycache__
