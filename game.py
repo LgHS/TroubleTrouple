@@ -13,6 +13,6 @@ def runSolution(s):
             mouse.mouseDown()
             down = True
         else :
-            mouse.dragTo(c)
+            mouse.moveTo(c)
     mouse.mouseUp()
     time.sleep(0.1)
